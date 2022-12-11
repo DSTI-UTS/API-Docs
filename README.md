@@ -11,7 +11,7 @@ Headers
 ```
 
 Accept: application/json
-Authorization: bearer access_token
+Authorization: Bearer access_token
 
 ```
 
