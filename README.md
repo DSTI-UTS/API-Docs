@@ -17,7 +17,7 @@ Authorization: bearer access_token
 
 ### 1. Autentikasi
 
--   Untuk mengakses API ini, Anda perlu menyertakan token API di setiap request. Token dapat diperoleh dengan mengirimkan request:
+- Token dapat diperoleh dengan mengirimkan request:
 
 Endpoint
 
