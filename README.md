@@ -3,8 +3,8 @@
 ## Endpoint List
 
 ### NOTE
-
-Pastikan mengirim headers setiap request:
+- BASE_URL = "http://kepegawaian.uts.ac.id/api/"
+- Pastikan mengirim headers setiap request:
 
 Headers
 
