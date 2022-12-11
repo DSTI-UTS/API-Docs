@@ -253,7 +253,7 @@ Body
 
 ```
 {
-    "file_start": "upload file with"
+    "file_start": "upload file"
 }
 ```
 
@@ -287,7 +287,7 @@ Body
 
 ```
 {
-    "file_start": "upload file with"
+    "file_start": "upload file"
 }
 ```
 
