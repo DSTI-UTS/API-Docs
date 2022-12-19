@@ -279,16 +279,7 @@ Response
 
 ```
 {
-  "data":  {
-      "id": 1,
-      "subject_id": 1,
-      "meeting_name": "Pertemuan ke 1",
-      "date": "2022-12-10T20:50",
-      "meeting_start": "2022-12-11 06:46:09",
-      "meeting_end": null,
-      "file_start": "63957cb1577431670741169-156.png",
-      "file_end": null
-  }
+  "data": "Akan mengembalikan link agar bisa di share ke mahasiswa (Menyusul)"
 }
 ```
 
@@ -313,6 +304,53 @@ Response
       "meeting_end": "2022-12-11 06:47:34",
       "file_start": "63957cb1577431670741169-156.png",
       "file_end": "63957d065151c1670741254-156.png"
+  }
+}
+```
+
+### 9. Absensi Kehadiran Masuk
+
+Endpoint
+
+```
+POST /presence/check-in
+Ex: POST /presence/check-in
+```
+Response
+
+```
+{
+  "data": {
+    "sdm_id": 98,
+    "check_in_time": "2022-12-19 12:13:18",
+    "latitude_in": "80",
+    "longitude_in": "80",
+    "id": 11
+  }
+}
+```
+
+### 10. List Absensi Kehadiran
+
+Endpoint
+
+```
+POST /presence/check-out
+Ex: POST /presence/check-out
+```
+Response
+
+```
+{
+  "data": {
+    "id": 11,
+    "sdm_id": 98,
+    "latitude_in": "80",
+    "longitude_in": "80",
+    "check_in_time": "2022-12-19 12:13:18",
+    "check_out_time": "2022-12-19 12:13:36",
+    "latitude_out": "80",
+    "longitude_out": "80",
   }
 }
 ```
