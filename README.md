@@ -74,20 +74,20 @@ Response
 
 {
   "data": {
-    "id": 237,
-    "sdm_id": "3656456-df9d-46456-aefdgrg71-376454568",
-    "sdm_name": "ARDIANSYAH PUTRA",
-    "email": "ardiansyah.putra@uts.ac.id",
-    "nidn": "83947838749",
-    "nip": "",
+    "id": 98,
+    "sdm_id": "5ded2223-3d3d-4cd4-bbab-8e041f1aec6c",
+    "sdm_name": "I MADE WIDIARTA",
+    "email": "i.made.widiarta@uts.ac.id",
+    "email_verified_at": null,
+    "nidn": "0813018701",
+    "nip": "0",
     "active_status_name": "Aktif",
     "employee_status": "NON PNS",
-    "sdm_type": "Tenaga Kependidikan",
-    "faculty_id": null,
-    "study_program_id": null,
-    "structure_id": 1,
-    "created_at": "2022-12-10T20:45:41.000000Z",
-    "updated_at": "2022-12-10T20:47:39.000000Z"
+    "sdm_type": "Dosen",
+    "is_sister_exist": 1,
+    "structure_id": 2,
+    "created_at": "2022-12-10T12:45:41.000000Z",
+    "updated_at": "2022-12-10T18:11:35.000000Z"
   }
 }
 
