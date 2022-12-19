@@ -211,7 +211,11 @@ Response
       "date": "2022-12-17T20:23",
       "meeting_start": "2022-12-19 23:21:58",
       "file": "63a08196be9c21671463318download.jfif.jpg",
-      "link": "http://127.0.0.1:8000/verify?sharer=1?is=63a08196c1b7c"
+      "url": {
+        "id": 2,
+        "meeting_id": 1,
+        "link": "/verify?sharer=1?is=63a088969b65b"
+      }
     },
     {
       "id": 2, 
