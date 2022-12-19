@@ -288,8 +288,8 @@ Response
 Endpoint
 
 ```
-POST /presence
-Ex: POST /presence
+GET /presence
+Ex: GET /presence
 ```
 Response
 
