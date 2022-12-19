@@ -108,27 +108,31 @@ Response
   "data": [
     {
       "id": 1,
-      "subject": "Dasar pemrograman web",
-      "class_id": 2,
+      "subject_name": "Dasar pemrograman web",
+      "class_name": "SPL-2016-A1",
+      "study_program": "Teknik Sipil",
+      "semester": "Ganjil 2022/2023",
       "sks": 4,
       "number_of_meetings": 16,
       "sdm_id": 98,
+      "sdm_name": "I MADE WIDIARTA",
       "value_sks": "0.50",
       "meetings_completed": 2,
-      "meetings_pending": 14,
-      "human_resource": {
-        "id": 98,
-        "sdm_name": "I MADE WIDIARTA"
-      },
-      "class": {
-        "id": 2,
-        "class": "SPL-2016-A1",
-        "structure_id": 21,
-        "structure": {
-          "id": 21,
-          "role": "Teknik Sipil"
-        }
-      }
+      "meetings_pending": 14
+    },
+    {
+      "id": 2,
+      "subject_name": "Matematika diskrit",
+      "class_name": "SPL-2016-A1",
+      "study_program": "Teknik Sipil",
+      "semester": "Ganjil 2022/2023",
+      "sks": 4,
+      "number_of_meetings": 16,
+      "sdm_id": 98,
+      "sdm_name": "I MADE WIDIARTA",
+      "value_sks": "0.25",
+      "meetings_completed": 1,
+      "meetings_pending": 15
     }
   ]
 }
@@ -148,28 +152,18 @@ Response
 {
   "data" : [
     {
-      "id": 1,
-      "subject": "Dasar pemrograman web",
-      "class_id": 2,
+      "id": 2,
+      "subject_name": "Matematika diskrit",
+      "class_name": "SPL-2016-A1",
+      "study_program": "Teknik Sipil",
+      "semester": "Ganjil 2022/2023",
       "sks": 4,
       "number_of_meetings": 16,
       "sdm_id": 98,
-      "value_sks": "0.50",
-      "meetings_completed": 2,
-      "meetings_pending": 14,
-      "human_resource": {
-        "id": 98,
-        "sdm_name": "I MADE WIDIARTA"
-      },
-      "class": {
-        "id": 2,
-        "class": "SPL-2016-A1",
-        "structure_id": 21,
-        "structure": {
-          "id": 21,
-          "role": "Teknik Sipil"
-        }
-      }
+      "sdm_name": "I MADE WIDIARTA",
+      "value_sks": "0.25",
+      "meetings_completed": 1,
+      "meetings_pending": 15
     }
   ]
 }
@@ -190,27 +184,17 @@ Response
 {
   "data": {
     "id": 1,
-    "subject": "Dasar pemrograman web",
-    "class_id": 2,
+    "subject_name": "Dasar pemrograman web",
+    "class_name": "SPL-2016-A1",
+    "study_program": "Teknik Sipil",
+    "semester": "Ganjil 2022/2023",
     "sks": 4,
     "number_of_meetings": 16,
     "sdm_id": 98,
+    "sdm_name": "I MADE WIDIARTA",
     "value_sks": "0.50",
     "meetings_completed": 2,
-    "meetings_pending": 14,
-    "human_resource": {
-      "id": 98,
-      "sdm_name": "I MADE WIDIARTA"
-    },
-    "class": {
-      "id": 2,
-      "class": "SPL-2016-A1",
-      "structure_id": 21,
-      "structure": {
-        "id": 21,
-        "role": "Teknik Sipil"
-      }
-    }
+    "meetings_pending": 14
   }
 }
 ```
