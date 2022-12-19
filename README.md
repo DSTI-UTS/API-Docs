@@ -328,6 +328,14 @@ Endpoint
 POST /presence/check-in
 Ex: POST /presence/check-in
 ```
+Body
+
+```
+{
+    "latitude": "80",
+    "longitude": "80"
+}
+```
 Response
 
 ```
@@ -350,6 +358,40 @@ Endpoint
 POST /presence/check-out
 Ex: POST /presence/check-out
 ```
+Body
+
+```
+{
+    "latitude": "80",
+    "longitude": "80"
+}
+```
+Response
+
+```
+{
+  "data": {
+    "id": 11,
+    "sdm_id": 98,
+    "latitude_in": "80",
+    "longitude_in": "80",
+    "check_in_time": "2022-12-19 12:13:18",
+    "check_out_time": "2022-12-19 12:13:36",
+    "latitude_out": "80",
+    "longitude_out": "80",
+  }
+}
+```
+
+### 10. List Absensi Hari Ini
+
+Endpoint
+
+```
+POST /presence/today
+Ex: POST /presence/today
+```
+
 Response
 
 ```
