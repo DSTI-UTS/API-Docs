@@ -198,6 +198,8 @@ GET /subject/{subject_id}/meeting
 Ex: GET /subject/1/meeting
 ```
 
+Link dapat dishare ke mahasiswa untuk mahasiswa melakukan absensi
+
 Response
 
 ```
@@ -205,19 +207,19 @@ Response
   "data": [
       {
       "id": 1,
-      "subject_id": 1,
       "meeting_name": "Pertemuan ke 1",
       "date": "2022-12-17T20:23",
-      "meeting_start": "2022-12-17T20:23",
-      "file": null
+      "meeting_start": "2022-12-19 23:21:58",
+      "file": "63a08196be9c21671463318download.jfif.jpg",
+      "link": "http://127.0.0.1:8000/verify?sharer=1?is=63a08196c1b7c"
     },
     {
-      "id": 2,
-      "subject_id": 1,
+      "id": 2, 
       "meeting_name": "Pertemuan ke 2",
       "date": "2022-12-18T13:37",
       "meeting_start": "2022-12-18T13:37",
-      "file": "639ea7197d5841671341849download.jfif.jpg"
+      "file": "639ea7197d5841671341849download.jfif.jpg",
+      "link": null
     },
     ...
      {
@@ -226,7 +228,8 @@ Response
       "meeting_name": "Pertemuan ke 16",
       "date": null,
       "meeting_start": null,
-      "file": null
+      "file": null,
+      "link": null
     }
   ]
 }
@@ -253,8 +256,8 @@ Response
 
 ```
 {
-  "data": "Akan mengembalikan link agar bisa di share ke mahasiswa (Menyusul)"
-}
+  "data": "Meeting dimulai"
+} 
 ```
 
 ### 8. List Absensi Kehadiran
