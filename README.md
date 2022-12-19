@@ -330,7 +330,7 @@ Response
 }
 ```
 
-### 10. List Absensi Kehadiran
+### 10. List Absensi Kehadiran Pulang
 
 Endpoint
 
