@@ -109,17 +109,25 @@ Response
     {
       "id": 1,
       "subject": "Dasar pemrograman web",
+      "class_id": 2,
       "sks": 4,
       "number_of_meetings": 16,
-      "study_program_id": 1,
-      "sdm_id": 237,
-      "meetings_completed": "1",
-      "meetings_pending": "15",
-      "value_sks": "0.25",
-      "study_program": {
-        "id": 1,
-        "faculty_id": 1,
-        "study_program": "informatika"
+      "sdm_id": 98,
+      "value_sks": "0.50",
+      "meetings_completed": 2,
+      "meetings_pending": 14,
+      "human_resource": {
+        "id": 98,
+        "sdm_name": "I MADE WIDIARTA"
+      },
+      "class": {
+        "id": 2,
+        "class": "SPL-2016-A1",
+        "structure_id": 21,
+        "structure": {
+          "id": 21,
+          "role": "Teknik Sipil"
+        }
       }
     }
   ]
@@ -142,17 +150,25 @@ Response
     {
       "id": 1,
       "subject": "Dasar pemrograman web",
+      "class_id": 2,
       "sks": 4,
       "number_of_meetings": 16,
-      "study_program_id": 1,
-      "sdm_id": 237,
-      "meetings_completed": "1",
-      "meetings_pending": "15",
-      "value_sks": "0.25",
-      "study_program": {
-        "id": 1,
-        "faculty_id": 1,
-        "study_program": "informatika"
+      "sdm_id": 98,
+      "value_sks": "0.50",
+      "meetings_completed": 2,
+      "meetings_pending": 14,
+      "human_resource": {
+        "id": 98,
+        "sdm_name": "I MADE WIDIARTA"
+      },
+      "class": {
+        "id": 2,
+        "class": "SPL-2016-A1",
+        "structure_id": 21,
+        "structure": {
+          "id": 21,
+          "role": "Teknik Sipil"
+        }
       }
     }
   ]
@@ -173,20 +189,28 @@ Response
 ```
 {
   "data": {
-      "id": 1,
-      "subject": "Dasar pemrograman web",
-      "sks": 4,
-      "number_of_meetings": 16,
-      "study_program_id": 1,
-      "sdm_id": 237,
-      "meetings_completed": "1",
-      "meetings_pending": "15",
-      "value_sks": "0.25",
-      "study_program": {
-        "id": 1,
-        "faculty_id": 1,
-        "study_program": "informatika"
+    "id": 1,
+    "subject": "Dasar pemrograman web",
+    "class_id": 2,
+    "sks": 4,
+    "number_of_meetings": 16,
+    "sdm_id": 98,
+    "value_sks": "0.50",
+    "meetings_completed": 2,
+    "meetings_pending": 14,
+    "human_resource": {
+      "id": 98,
+      "sdm_name": "I MADE WIDIARTA"
+    },
+    "class": {
+      "id": 2,
+      "class": "SPL-2016-A1",
+      "structure_id": 21,
+      "structure": {
+        "id": 21,
+        "role": "Teknik Sipil"
       }
+    }
   }
 }
 ```
@@ -209,32 +233,26 @@ Response
       "id": 1,
       "subject_id": 1,
       "meeting_name": "Pertemuan ke 1",
-      "date": "2022-12-10T20:50",
-      "meeting_start": "2022-12-10T20:50",
-      "meeting_end": "2022-12-10T20:50",
-      "file_start": "C:\\xampp\\tmp\\php50D.tmp",
-      "file_end": "C:\\xampp\\tmp\\php50E.tmp"
+      "date": "2022-12-17T20:23",
+      "meeting_start": "2022-12-17T20:23",
+      "file": null
     },
     {
       "id": 2,
       "subject_id": 1,
       "meeting_name": "Pertemuan ke 2",
-      "date": null,
-      "meeting_start": null,
-      "meeting_end": null,
-      "file_start": null,
-      "file_end": null
+      "date": "2022-12-18T13:37",
+      "meeting_start": "2022-12-18T13:37",
+      "file": "639ea7197d5841671341849download.jfif.jpg"
     },
     ...
-    {
+     {
       "id": 16,
       "subject_id": 1,
       "meeting_name": "Pertemuan ke 16",
       "date": null,
       "meeting_start": null,
-      "meeting_end": null,
-      "file_start": null,
-      "file_end": null
+      "file": null
     }
   ]
 }
@@ -245,15 +263,15 @@ Response
 Endpoint
 
 ```
-POST /subject/{subject_id}/start-meeting/{meeting_id}
-Ex: POST /subject/1/start-meeting/1
+POST /subject/{subject_id}/meeting/{meeting_id}/start
+Ex: POST /subject/1/meeting/1/start
 ```
 
 Body
 
 ```
 {
-    "file_start": "upload file"
+    "file": "upload file"
 }
 ```
 
@@ -274,23 +292,14 @@ Response
 }
 ```
 
-### 8. Absen Selesai Kelas
+### 8. List Absensi Kehadiran
 
 Endpoint
 
 ```
-POST /subject/{subject_id}/end-meeting/{meeting_id}
-Ex: POST /subject/1/end-meeting/1
+POST /presence
+Ex: POST /presence
 ```
-
-Body
-
-```
-{
-    "file_start": "upload file"
-}
-```
-
 Response
 
 ```
