@@ -1,6 +1,6 @@
 # Endpoints
 
-- APP_KEY=base64:/6L4SQNAW2uV5/HA2mNpUN739qcF1dliFjq2PvCDX/k=
+- APP_KEY=
 
 -   get token
 
@@ -9,8 +9,8 @@ POST https://kepegawaian.uts.ac.id/api/auth/token
 Body
 
 ```
-email: abbyzar.aggasi@uts.ac.id
-password: 0818019001
+email: 
+password: 
 
 ```
 
