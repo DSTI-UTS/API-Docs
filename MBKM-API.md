@@ -4,11 +4,11 @@
 
 POST https://kepegawaian.uts.ac.id/api/auth/token
 
-Headers
+Body
 
 ```
-Accept: application/json
-Authorization: Bearer 7|Il0L7nxAezzwrlSAbV7y7c0HZva4DMnCQVBUg4q4
+email: abbyzar.aggasi@uts.ac.id
+password: 0818019001
 
 ```
 
