@@ -1,5 +1,7 @@
 # Endpoints
 
+- APP_KEY=base64:/6L4SQNAW2uV5/HA2mNpUN739qcF1dliFjq2PvCDX/k=
+
 -   get token
 
 POST https://kepegawaian.uts.ac.id/api/auth/token
