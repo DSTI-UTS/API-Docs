@@ -6,6 +6,12 @@
 
 Pastikan mengirim headers setiap request:
 
+Base URL
+
+```
+https://kepegawaian.uts.ac.id/api
+```
+
 Headers
 
 ```
@@ -432,5 +438,39 @@ Response
 ```
 {
   "data": true or false
+}
+```
+
+### 12. List Coordinates
+
+Endpoint
+
+```
+GET /coord
+Ex: GET /coord
+```
+
+Response
+
+```
+{
+  "data": [
+    {
+      "latitude": "80",
+      "longitude": "80",
+    },
+    {
+      "latitude": "80",
+      "longitude": "80",
+    },
+    {
+      "latitude": "80",
+      "longitude": "80",
+    },
+    {
+      "latitude": "80",
+      "longitude": "80",
+    },
+  ]
 }
 ```
