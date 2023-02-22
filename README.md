@@ -392,7 +392,7 @@ Body
 {
     "latitude": "80",
     "longitude": "80",
-    "check_in_time": "date"
+    "check_out_time": "date"
 }
 ```
 
