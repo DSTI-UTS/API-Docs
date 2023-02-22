@@ -396,7 +396,22 @@ Body
 }
 ```
 
-Response No Content (204)
+Response
+
+```
+{
+  "data": {
+    "id": 11,
+    "sdm_id": 98,
+    "latitude_in": "80",
+    "longitude_in": "80",
+    "check_in_time": "2022-12-19 12:13:18",
+    "check_out_time": "2022-12-19 12:13:36",
+    "latitude_out": "80",
+    "longitude_out": "80",
+  }
+}
+```
 
 ### 11. List Absensi Hari Ini
 
