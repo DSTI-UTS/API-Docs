@@ -1,5 +1,5 @@
 # User
-1. Staff
+1. Staff atau Admin Prodi 
 ```
 email: acuh.dharmawan.junaidi@uts.ac.id
 password: 7700018335
