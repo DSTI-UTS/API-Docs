@@ -508,7 +508,13 @@ Endpoint
 
 ```
 GET /presence/total-hour
-Ex: GET /presence/total-hour
+Ex: GET /presence/total-hour?start=01-02-2023&end=05-02-2023
+```
+
+Query Params (Optional)
+```
+start = 01-02-2023
+end = 05-02-2023
 ```
 
 Response
