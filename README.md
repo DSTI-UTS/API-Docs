@@ -501,3 +501,25 @@ Response
   ]
 }
 ```
+
+### 13. Get work hours
+
+Endpoint
+
+```
+GET /presence/total-hour
+Ex: GET /presence/total-hour
+```
+
+Response
+
+```
+[
+  {
+    "sdm_name": "AHMAD JULIANSYAH",
+    "id": 12,
+    "effective_hours": "07:00:00",
+    "ineffective_hours": "00:00:00"
+  }
+]
+```
