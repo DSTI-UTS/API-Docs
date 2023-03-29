@@ -529,3 +529,206 @@ Response
   }
 }
 ```
+
+### 14. GET permission type
+
+Endpoint
+
+```
+GET /permission/type
+```
+
+Description:
+Returns a list of available permission types.
+
+Response
+```
+{
+  'data': {
+        '1': 'Tidak Masuk',
+        '2': 'Izin Berkegiatan Diluar 1/2 Hari',
+        '3': 'Izin Berkegiatan Diluar 1 Hari',
+        '4': 'Izin Sakit',
+        '5': 'Terkendala Absen Masuk',
+        '6': 'Terkendala Absen Pulang'
+    }
+}
+```
+
+### 15. GET user permission
+
+Endpoint
+
+```
+GET /permission/me
+```
+
+Description:
+Returns a list of permissions submitted by the authenticated user.
+
+Response
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "sdm_id": 1,
+            "sdm_name": "John Doe",
+            "created_at": "2023-03-29T13:25:00.000000Z",
+            "attachment": {
+                "id": 1,
+                "presence_id": 1,
+                "detail": "contoh detail 1",
+                "attachment": "/storage/attachments/test.jpg"
+            }
+        },
+        {
+            "id": 2,
+            "sdm_id": 1,
+            "sdm_name": "John Doe",
+            "created_at": "2023-03-28T09:30:00.000000Z",
+            "attachment": null
+        }
+    ]
+}
+```
+
+### 16. GET user sub permission
+
+Endpoint
+
+```
+GET /permission/sub
+```
+
+Description:
+Returns a list of permissions submitted by the sub-division user.
+
+Response
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "sdm_id": 1,
+            "sdm_name": "John Doe",
+            "created_at": "2023-03-29T13:25:00.000000Z",
+            "attachment": {
+                "id": 1,
+                "presence_id": 1,
+                "detail": "contoh detail 1",
+                "attachment": "/storage/attachments/test.jpg"
+            }
+        },
+        {
+            "id": 2,
+            "sdm_id": 1,
+            "sdm_name": "John Doe",
+            "created_at": "2023-03-28T09:30:00.000000Z",
+            "attachment": null
+        }
+    ]
+}
+```
+
+### 17. POST new permission
+
+Endpoint
+
+```
+POST /permission
+```
+
+Description:
+Submits a new permission request for the authenticated user.
+
+Body
+```
+jenis_izin: required, integer (1-6), specifies the type of permission being requested from list of available permission types.
+detail: required if jenis_izin 1-5, string, provides additional details about the permission request
+attachment: required if jenis_izin 1-5, file, any supporting documentation for the permission request (mimes:doc,docx,pdf,jpeg,jpg,png|max:4096)
+```
+
+Error Response
+```
+- Form is missing
+{
+    "errors": {
+        "jenis_izin": [
+            "The jenis izin field is required."
+        ],
+        "detail": [
+            "The detail field is required."
+        ],
+        "attachment": [
+            "The attachment field is required."
+        ]
+    }
+}
+
+- For 'jenis_izin' 6 (Terkendala absen pulang), there must be data of attendance in, otherwise an error will occur
+{
+  error: 'Anda belum absen masuk hari ini'
+}
+
+- If user already check in or check out in the same day
+{
+  error: 'Anda sudah mengisi ijin hari ini'
+  or
+  error: 'Anda sudah mengisi absen pulang hari ini'
+}
+```
+
+Response
+```
+Status Code: 201 Created
+Content-Type: application/json
+{
+    "data": true
+}
+```
+
+### 18. POST approve permission
+
+Endpoint
+
+```
+POST /permission/{presence->id}
+```
+
+Description:
+Approve a permission request from sub-division.
+
+Error Response
+```
+- Because the person who approved is not their directur/supervisor
+{
+  error: 'Anda tidak dapat memberikan izin'
+}
+```
+
+Response
+```
+{
+    "data": true
+}
+```
+
+
+### 19. DELETE delete permission
+
+Endpoint
+
+```
+DELETE /permission/{presence->id}
+```
+
+Description:
+Delete a permission. 
+
+Response
+```
+{
+    "data": true
+}
+```
