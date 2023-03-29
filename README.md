@@ -439,7 +439,7 @@ Response
 }
 ```
 
-### 11. Check Apakah Sudah Telat
+### 12. Check Apakah Sudah Telat
 
 Endpoint
 
@@ -456,7 +456,7 @@ Response
 }
 ```
 
-### 12. List Coordinates
+### 13. List Coordinates
 
 Endpoint
 
@@ -502,7 +502,7 @@ Response
 }
 ```
 
-### 13. Get work hours
+### 14. Get work hours
 
 Endpoint
 
@@ -530,7 +530,7 @@ Response
 }
 ```
 
-### 14. GET permission type
+### 15. GET permission type
 
 Endpoint
 
@@ -555,7 +555,7 @@ Response
 }
 ```
 
-### 15. GET user permission
+### 16. GET user permission
 
 Endpoint
 
@@ -593,7 +593,7 @@ Response
 }
 ```
 
-### 16. GET user sub permission
+### 17. GET user sub permission
 
 Endpoint
 
@@ -631,7 +631,7 @@ Response
 }
 ```
 
-### 17. POST new permission
+### 18. POST new permission
 
 Endpoint
 
@@ -689,7 +689,7 @@ Content-Type: application/json
 }
 ```
 
-### 18. POST approve permission
+### 19. POST approve permission
 
 Endpoint
 
@@ -716,7 +716,7 @@ Response
 ```
 
 
-### 19. DELETE delete permission
+### 20. DELETE delete permission
 
 Endpoint
 
