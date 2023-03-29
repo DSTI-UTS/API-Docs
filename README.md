@@ -643,11 +643,12 @@ Description:
 Submits a new permission request for the authenticated user.
 
 Body
-```
-jenis_izin: required, integer (1-6), specifies the type of permission being requested from list of available permission types.
-detail: required if jenis_izin 1-5, string, provides additional details about the permission request
-attachment: required if jenis_izin 1-5, file, any supporting documentation for the permission request (mimes:doc,docx,pdf,jpeg,jpg,png|max:4096)
-```
+| field         | Type          | Required  | Description  |
+| ------------- |:-------------:| ---------:| ------------:|
+| jenis_izin    | integer (1-6) | required  | Specifies the type of permission being requested from the list of available permission types. |
+| detail        | string        | required if jenis_izin 1-5 | Provides additional details about the permission request. |
+| attachment    | file          | required if jenis_izin 1-5 | Any supporting documentation for the permission request. (mimes:doc,docx,pdf,jpeg,jpg,png|max:4096) |
+
 
 Error Response
 ```
