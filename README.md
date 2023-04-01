@@ -284,57 +284,52 @@ Endpoint
 
 ```
 GET /presence
+Optional GET /presence?start=2023-03-278&end=2023-03-31
 ```
+
+Query Params (Optional)
+```
+start = 2023-03-27
+end = 2023-03-31
+```
+
+Description
+- Default: Getting the total working hours for the current week in the calendar
 
 Response
 
 ```
 {
-  "data": [
-    {
-      "id": 3,
-      "sdm_id": 98,
-      "latitude_in": "0",
-      "longitude_in": "0",
-      "latitude_out": null,
-      "longitude_out": null,
-      "check_in_date": "Sunday, 18-12-2022",
-      "check_out_date": "Sunday, 18-12-2022",
-      "check_in_hour": "22:08",
-      "check_out_hour": "22:08",
-      "hours": "0",
-      "minutes": "0"
-    },
-    {
-      "id": 4,
-      "sdm_id": 98,
-      "latitude_in": "80",
-      "longitude_in": "80",
-      "latitude_out": "90",
-      "longitude_out": "90",
-      "check_in_date": "Sunday, 18-12-2022",
-      "check_out_date": "Sunday, 18-12-2022",
-      "check_in_hour": "22:11",
-      "check_out_hour": "22:28",
-      "hours": "0",
-      "minutes": "17"
-    },
-    ...
-    {
-      "id": 6,
-      "sdm_id": 98,
-      "latitude_in": "80",
-      "longitude_in": "80",
-      "latitude_out": null,
-      "longitude_out": null,
-      "check_in_date": "Monday, 19-12-2022",
-      "check_out_date": "Monday, 19-12-2022",
-      "check_in_hour": "08:29",
-      "check_out_hour": "08:29",
-      "hours": "0",
-      "minutes": "0"
+  "data": {
+      "presences": [
+        {
+          "id": 2484,
+          "sdm_id": 12,
+          "check_in_date": "Monday, 27-03-2023",
+          "check_out_date": "Monday, 27-03-2023",
+          "check_in_hour": "09:13",
+          "check_out_hour": "16:45",
+          "effective_hours": "06:46:10",
+          "ineffective_hours": "00:00:00"
+        },
+        {
+          "id": 2643,
+          "sdm_id": 12,
+          "check_in_date": "Tuesday, 28-03-2023",
+          "check_out_date": "Tuesday, 28-03-2023",
+          "check_in_hour": "08:49",
+          "check_out_hour": "15:25",
+          "effective_hours": "06:25:28",
+          "ineffective_hours": "00:00:00"
+        }
+      ],
+    "effective_hours": {
+      "sdm_name": "AHMAD JULIANSYAH",
+      "id": 12,
+      "effective_hours": "13:11:38",
+      "ineffective_hours": "00:00:00"
     }
-  ]
+  }
 }
 ```
 
@@ -508,14 +503,17 @@ Endpoint
 
 ```
 GET /presence/total-hour
-Ex: GET /presence/total-hour?start=2022-12-18&end=2022-12-18
+Ex: GET /presence/total-hour?start=2023-03-278&end=2023-03-31
 ```
 
 Query Params (Optional)
 ```
-start = 2022-12-18
-end = 2022-12-18
+start = 2023-03-27
+end = 2023-03-31
 ```
+
+Description
+- Default: Getting the total working hours for the current week in the calendar 
 
 Response
 
@@ -524,7 +522,7 @@ Response
   "data": {
     "sdm_name": "AHMAD JULIANSYAH",
     "id": 12,
-    "effective_hours": "07:00:00",
+    "effective_hours": "13:11:38",
     "ineffective_hours": "00:00:00"
   }
 }
