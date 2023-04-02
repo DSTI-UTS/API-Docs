@@ -580,7 +580,8 @@ GET /permission/me
 ```
 
 Description:
-Returns a list of permissions submitted by the authenticated user.
+- Returns a list of permissions submitted by the authenticated user.
+- The base URL for attachment is https://kepegawaian.uts.ac.id/download/presense/{attachment}
 
 Response
 ```
@@ -619,7 +620,7 @@ GET /permission/sub
 
 Description:
 - Returns a list of permissions submitted by the sub-division user.
-- The base URL for attachment is https://kepegawaian.uts.ac.id/download/presense/
+- The base URL for attachment is https://kepegawaian.uts.ac.id/download/presense/{attachment}
 
 Response
 ```
@@ -699,8 +700,6 @@ Error Response
 
 Response
 ```
-Status Code: 201 Created
-Content-Type: application/json
 {
     "data": true
 }
