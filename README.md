@@ -542,14 +542,32 @@ Returns a list of available permission types.
 Response
 ```
 {
-  'data': {
-        '1': 'Tidak Masuk',
-        '2': 'Izin Berkegiatan Diluar 1/2 Hari',
-        '3': 'Izin Berkegiatan Diluar 1 Hari',
-        '4': 'Izin Sakit',
-        '5': 'Terkendala Absen Masuk',
-        '6': 'Terkendala Absen Pulang'
+  "data": [
+    {
+      "id": 1,
+      "jenis_izin": "Tidak Masuk"
+    },
+    {
+      "id": 2,
+      "jenis_izin": "Izin Berkegiatan Diluar 1/2 Hari"
+    },
+    {
+      "id": 3,
+      "jenis_izin": "Izin Berkegiatan Diluar 1 Hari"
+    },
+    {
+      "id": 4,
+      "jenis_izin": "Izin Sakit"
+    },
+    {
+      "id": 5,
+      "jenis_izin": "Terkendala Absen Masuk"
+    },
+    {
+      "id": 6,
+      "jenis_izin": "Terkendala Absen Pulang"
     }
+  ]
 }
 ```
 
