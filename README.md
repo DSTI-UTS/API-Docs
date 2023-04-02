@@ -618,7 +618,8 @@ GET /permission/sub
 ```
 
 Description:
-Returns a list of permissions submitted by the sub-division user.
+- Returns a list of permissions submitted by the sub-division user.
+- The base URL for attachment is https://kepegawaian.uts.ac.id/download/presense/
 
 Response
 ```
