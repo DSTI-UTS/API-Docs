@@ -23,7 +23,7 @@ Authorization: Bearer access_token
 
 ### 1. Autentikasi
 
--   Token dapat diperoleh dengan mengirimkan request:
+- Token dapat diperoleh dengan mengirimkan request:
 
 Endpoint
 
@@ -47,9 +47,48 @@ Body
 
 {
   "email": "johndoe@example.com",
-  "password": "password123"
+  "password": "password123",
+  "mac_address": "contohmac"
 }
 
+```
+
+Error missing form
+
+```
+{
+  "error": {
+    "mac_address": [
+      "The mac address field is required."
+    ],
+    "email": [
+      "The email field is required."
+    ],
+    "password": [
+      "The password field is required."
+    ]
+  }
+}
+```
+
+Error login with different device
+
+```
+
+{
+  "error": "You have logged from a different device."
+}
+```
+
+Error account not registered or invalid cridentals
+
+```
+{
+  "error": "Your account is not registered."
+}
+{
+  "error": "The provided credentials are incorrect."
+}
 ```
 
 Response
@@ -288,12 +327,14 @@ Optional GET /presence?start=2023-03-278&end=2023-03-31
 ```
 
 Query Params (Optional)
+
 ```
 start = 2023-03-27
 end = 2023-03-31
 ```
 
 Description
+
 - Default: Getting the total working hours for the current week in the calendar
 
 Response
@@ -507,13 +548,15 @@ Ex: GET /presence/total-hour?start=2023-03-278&end=2023-03-31
 ```
 
 Query Params (Optional)
+
 ```
 start = 2023-03-27
 end = 2023-03-31
 ```
 
 Description
-- Default: Getting the total working hours for the current week in the calendar 
+
+- Default: Getting the total working hours for the current week in the calendar
 
 Response
 
@@ -540,24 +583,25 @@ Description:
 Returns a list of available permission types.
 
 Response
+
 ```
 {
   "data": [
     {
       "id": 1,
-      "jenis_izin": "Tidak Masuk"
+      "jenis_izin": "Izin Cuti"
     },
     {
       "id": 2,
-      "jenis_izin": "Izin Berkegiatan Diluar 1/2 Hari"
+      "jenis_izin": "Izin Sakit"
     },
     {
       "id": 3,
-      "jenis_izin": "Izin Berkegiatan Diluar 1 Hari"
+      "jenis_izin": "Izin Berkegiatan Diluar 1/2 Hari"
     },
     {
       "id": 4,
-      "jenis_izin": "Izin Sakit"
+      "jenis_izin": "Izin Berkegiatan Diluar 1 Hari Atau Lebih"
     },
     {
       "id": 5,
@@ -580,10 +624,12 @@ GET /permission/me
 ```
 
 Description:
+
 - Returns a list of permissions submitted by the authenticated user.
 - The base URL for attachment is https://kepegawaian.uts.ac.id/download/presense/{attachment}
 
 Response
+
 ```
 {
     "data": [
@@ -619,10 +665,12 @@ GET /permission/sub
 ```
 
 Description:
+
 - Returns a list of permissions submitted by the sub-division user.
 - The base URL for attachment is https://kepegawaian.uts.ac.id/download/presense/{attachment}
 
 Response
+
 ```
 {
     "data": [
@@ -661,14 +709,17 @@ Description:
 Submits a new permission request for the authenticated user.
 
 Body
-| field         | Type          | Required  | Description  |
-| ------------- |:-------------:| ---------:| ------------:|
-| jenis_izin    | integer (1-6) | required  | Specifies the type of permission being requested from the list of available permission types. |
-| detail        | string        | required if jenis_izin 1-5 | Provides additional details about the permission request. |
-| attachment    | file          | required if jenis_izin 1-5 | Any supporting documentation for the permission request. (mimes:doc,docx,pdf,jpeg,jpg,png|max:4096) |
 
+| field      |     Type     |                         Required |                                                                                                                                                           Description |
+| ---------- | :-----------: | -------------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| jenis_izin | integer (1-6) |                         required |                                                                    Specifies the type of permission being requested from<br />the list of available permission types. |
+| detail     |    string    |                         required |                                                                                                                        Provides details about the permission request. |
+| attachment |     file     |                         required |                                                                       Any supporting documentation for the permission request.<br />(mimes:doc,docx,pdf,jpeg,jpg,png) |
+| start_date |    string    | required if jenis_izin is 1 to 4 |                                                                                                                        Start date is the start date of the permission |
+| end_date   |    string    |                         nullable | Start date is the date the permit ends,<br />if this column is filled then the permit will automatically <br />fill in the permit in the range of start and end dates |
 
 Error Response
+
 ```
 - Form is missing
 {
@@ -681,6 +732,12 @@ Error Response
         ],
         "attachment": [
             "The attachment field is required."
+        ],
+        "start_date": [
+            "The start date field is required."
+        ],
+        "end_date": [
+            "The end date field is required."
         ]
     }
 }
@@ -699,6 +756,7 @@ Error Response
 ```
 
 Response
+
 ```
 {
     "data": true
@@ -717,6 +775,7 @@ Description:
 Approve a permission request from sub-division.
 
 Error Response
+
 ```
 - Because the person who approved is not their directur/supervisor
 {
@@ -725,12 +784,12 @@ Error Response
 ```
 
 Response
+
 ```
 {
     "data": true
 }
 ```
-
 
 ### 20. DELETE delete permission
 
@@ -741,9 +800,10 @@ DELETE /permission/{presence->id}
 ```
 
 Description:
-Delete a permission. 
+Delete a permission.
 
 Response
+
 ```
 {
     "data": true
