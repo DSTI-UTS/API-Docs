@@ -6,10 +6,11 @@
 
 Pastikan mengirim headers setiap request:
 
-Base URL
+Base URL 
 
 ```
-https://kepegawaian.uts.ac.id/api
+- dev https://kepegawaian.uts.ac.id/test/api
+- prod https://kepegawaian.uts.ac.id/api
 ```
 
 Headers
